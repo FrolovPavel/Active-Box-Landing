@@ -1,3 +1,5 @@
+
+/* fixed header*/
 let header = document.querySelector("#header");
 let intro = document.querySelector("#intro");
 let introH = intro.clientHeight;
@@ -13,4 +15,22 @@ addEventListener("scroll", function () {
     }
 
 })
+
+/* Smooth sroll */
+window.addEventListener("load", () => {
+    let dataScroll = document.querySelectorAll("[data-sroll]");
+    console.log(dataScroll);
+    for (let i = 0; i < dataScroll.length; i++)
+        dataScroll[i].addEventListener("click", (event) => {
+          event.preventDefault();
+        const blockID = event.target.getAttribute("data-sroll").substr(1);
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+        })
+})
+
+
+
 
