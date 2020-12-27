@@ -41,6 +41,20 @@ p {
 	z-index: 100;	
 }
 
+.header.fixed {
+	position: fixed;
+	background: #30334E;
+	height: auto;
+	opacity: 0.95;
+	border-radius: 15px;
+}
+
+
+.header.fixed .header__inner {
+	padding: 15px 0;
+	border-bottom: none;
+}
+
 .header__inner {
 	display: flex;
 	justify-content: space-between;
@@ -65,7 +79,6 @@ p {
 =======================*/
 .nav {
 	display: flex;
-	
 }
 
 .nav__link {
