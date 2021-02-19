@@ -17,20 +17,20 @@ addEventListener("scroll", function () {
 })
 
 /* Smooth sroll */
-window.addEventListener("load", () => {
-    let dataScroll = document.querySelectorAll("[data-sroll]");
-    console.log(dataScroll);
-    for (let i = 0; i < dataScroll.length; i++)
-        dataScroll[i].addEventListener("click", (event) => {
-          event.preventDefault();
-        const blockID = event.target.getAttribute("data-sroll").substr(1);
-        document.getElementById(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-        })
-})
 
+document.querySelectorAll('a[href*="#"').forEach(link => {
 
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
 
+        let href = this.getAttribute('href').substring(1);
+        const scrollTarget = document.getElementById(href);
+        const elementPosition = scrollTarget.getBoundingClientRect().top -70;
+
+        window.scrollBy({
+            top: elementPosition,
+            behavior: 'smooth'
+        });
+    });
+});
 
