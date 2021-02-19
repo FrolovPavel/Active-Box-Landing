@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>ActiveBox</title>
 </head>
 <body>
 	<!-- header
@@ -17,14 +18,14 @@
 				<div class="header__logo">
 					<a href="#intro" ><img src="img/ActiveBox logo.png" alt=""></a>
 				</div>
-				<nav class="nav">
+				<nav class="nav" >
 					<a class="nav__link" href="#features" data-sroll="#features">Features</a>
 					<a class="nav__link" href="#works" data-sroll="#works">Works</a>
 					<a class="nav__link" href="#team" data-sroll="#team">Our Team</a>
 					<a class="nav__link" href="#download" data-sroll="#download">Download</a>
 				</nav>
 						
-				<button class="burger" type="button">
+				<button class="burger" type="button" id="nav_burger">
 					<span class="burger__item"><!-- Menu --></span>
 				</button>
 
@@ -267,14 +268,28 @@
 ======================== -->
 <div class="reviews" id="reviews">
 	<div class="container">
-		<div class="reviews__item">
-			<div class="reviews__photo">
-				<img class="reviews__img" src="img/reviews/rev1.jpg" alt="">
+		<div class="reviewsSlider">
+
+			<div class="reviews__item">
+				<div class="reviews__photo">
+					<img class="reviews__img" src="img/reviews/rev1.jpg" alt="">
+				</div>
+				<div class="reviews__content">
+					<div class="reviews_text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
+					<div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+				</div>
 			</div>
-			<div class="reviews__content">
-				<div class="reviews_text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
-				<div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+
+			<div class="reviews__item">
+				<div class="reviews__photo">
+					<img class="reviews__img" src="img/reviews/rev1.jpg" alt="">
+				</div>
+				<div class="reviews__content">
+					<div class="reviews_text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
+					<div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+				</div>
 			</div>
+
 		</div>
 	</div>
 </div>
@@ -339,7 +354,9 @@
 
 
 <!-- JS -->
-<script src="app.js"></script>
 
+
+	<script src="app.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

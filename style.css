@@ -530,7 +530,24 @@ p {
 
 	/*nav*/
 	.nav {
+		/*display: none;*/
+		width: 100%;
+		flex-direction: column;
+		text-align: center;
+		position: absolute;
+		top: 100%;
+		right: 0px;
+		background-color: #31344e;
+		border-radius: 15px;
+		border-top: 1px solid;
+	}
+
+	.nav.show {
 		display: none;
+	}
+
+	.nav__link {
+		padding: 10px 50px 10px 0px;
 	}
 
 	/*burger*/

@@ -17,7 +17,7 @@ addEventListener("scroll", function () {
 })
 
 /* Smooth sroll */
-
+let nav = document.querySelector('.nav');
 document.querySelectorAll('a[href*="#"').forEach(link => {
 
     link.addEventListener('click', function(e) {
@@ -25,12 +25,36 @@ document.querySelectorAll('a[href*="#"').forEach(link => {
 
         let href = this.getAttribute('href').substring(1);
         const scrollTarget = document.getElementById(href);
-        const elementPosition = scrollTarget.getBoundingClientRect().top -70;
+        const elementPosition = scrollTarget.getBoundingClientRect().top -60;
 
         window.scrollBy({
             top: elementPosition,
             behavior: 'smooth'
         });
+        function navHide() {
+            nav.classList.toggle("show")
+        }
+
+        setTimeout(navHide, 200)
     });
 });
 
+/* Nav Burger */
+
+let burgerBtn = document.querySelector("#nav_burger");
+
+burgerBtn.addEventListener("click", (e) => {
+
+    nav.classList.toggle("show")
+})
+
+/*Reviews*/
+
+let slider = document.querySelector('.reviewsSlider')
+
+slider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true
+});
