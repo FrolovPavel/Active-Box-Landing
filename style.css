@@ -354,6 +354,15 @@ p {
 	background-color: #53354a;
 }
 
+.reviewsSlider {
+	height: 500px;
+	overflow: hidden;
+}
+
+.reviewsSlider.slick-initialized {
+	height: auto;
+}
+
 .reviews__item {
 	display: flex;
 	flex-wrap: wrap;
@@ -400,6 +409,44 @@ p {
  	text-transform: uppercase;
 }
 
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0 0 10px;
+	list-style: none;
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.slick-dots li {
+	margin: 0 5px;
+}
+
+.slick-dots button {
+	width: 15px;
+	height: 15px;
+
+	background: #fff;
+	border-radius: 50%;
+	border: 0;
+	padding: 0;
+	font-size: 0;
+	color: transparent;
+	opacity: 0.5;
+	co
+}
+
+.slick-dots button:focus {
+	outline: 0;
+}
+
+.slick-dots .slick-active button {
+	opacity: 1;
+}
 /*Download
 ========================*/
 
