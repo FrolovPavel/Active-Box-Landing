@@ -58,7 +58,8 @@ slider.slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    pauseOnHover: false,
     fade: true,
     arrows:false,
-    dots: true
+    dots: true,
 });
