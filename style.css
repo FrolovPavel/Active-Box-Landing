@@ -335,6 +335,7 @@ p {
 	height: 40px;
 	border: 1px solid #e8ecee;
 	opacity: .4;
+	transition: background .3s;
 }
 
 .social--footer .social__item {
@@ -349,6 +350,7 @@ p {
 .social__item:hover {
 	opacity: 1;
 	background: #e8ecee;
+	transition: background .3s;
 }
 
 /*reviews
