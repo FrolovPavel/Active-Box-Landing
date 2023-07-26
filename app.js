@@ -49,17 +49,18 @@ burgerBtn.addEventListener("click", (e) => {
 })
 
 /*Reviews*/
-
-let slider = $('.reviewsSlider')
-
-slider.slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: false,
-    fade: true,
-    arrows:false,
-    dots: true,
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
 });
+
+
